@@ -38,30 +38,30 @@ const EditCategory = () => {
     return (
         <div>
             {/* <!-- Content Wrapper. Contains page content --> */}
-            <div class="content-wrapper">
-                <section class="content">
-                    <div class="container-fluid">
+            <div className="content-wrapper">
+                <section className="content">
+                    <div className="container-fluid">
                         <br />
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card card-primary">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Edit Category</h3>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="card card-primary">
+                                    <div className="card-header">
+                                        <h3 className="card-title">Edit Category</h3>
                                     </div>
                                     <form onSubmit={updateCategory}>
-                                        <div class="card-body">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Category Name</label>
+                                        <div className="card-body">
+                                            <div className="form-group">
+                                                <label htmlFor="exampleInputEmail1">Category Name</label>
                                                 <input
                                                     type="text"
-                                                    class="form-control"
+                                                    className="form-control"
                                                     placeholder="Enter Category Name"
                                                     value={category_name} onChange={(e) => setName(e.target.value)}/>
                                             </div>
                                         </div>
 
-                                        <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        <div className="card-footer">
+                                            <button type="submit" className="btn btn-primary">Submit</button>
                                         </div>
                                     </form>
                                 </div>

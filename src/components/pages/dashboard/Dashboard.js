@@ -1,5 +1,8 @@
 import React, {useEffect} from 'react'
 import { useNavigate} from 'react-router-dom';
+import Header from '../../layout/Header';
+import Footer from '../../layout/Footer';
+import Sidebar from '../../layout/Sidebar';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -9,67 +12,70 @@ const Dashboard = () => {
             navigate('/');
         }
     }, []);
+    
     return (
+        <React.Fragment>
+        <Header />
+        <Sidebar />
         <div>
-            {/* <!-- Content Wrapper. Contains page content --> */}
-            <div class="content-wrapper">
-                <section class="content">
-                    <div class="container-fluid">
+            <div className="content-wrapper">
+                <section className="content">
+                    <div className="container-fluid">
                         <br />
-                        <div class="row">
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box bg-info">
-                                    <div class="inner">
+                        <div className="row">
+                            <div className="col-lg-3 col-6">
+                                <div className="small-box bg-info">
+                                    <div className="inner">
                                         <h3>13</h3>
                                         <p>Events Active</p>
                                     </div>
-                                    <div class="icon">
-                                        <i class="fas fa-shopping-cart"></i>
+                                    <div className="icon">
+                                        <i className="fas fa-shopping-cart"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">
-                                        More info <i class="fas fa-arrow-circle-right"></i>
+                                    <a href="#" className="small-box-footer">
+                                        More info <i className="fas fa-arrow-circle-right"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box bg-warning">
-                                    <div class="inner">
+                            <div className="col-lg-3 col-6">
+                                <div className="small-box bg-warning">
+                                    <div className="inner">
                                         <h3>150</h3>
                                         <p>Total Events</p>
                                     </div>
-                                    <div class="icon">
-                                        <i class="fas fa-shopping-cart"></i>
+                                    <div className="icon">
+                                        <i className="fas fa-shopping-cart"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">
-                                        More info <i class="fas fa-arrow-circle-right"></i>
+                                    <a href="#" className="small-box-footer">
+                                        More info <i className="fas fa-arrow-circle-right"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box bg-success">
-                                    <div class="inner">
+                            <div className="col-lg-3 col-6">
+                                <div className="small-box bg-success">
+                                    <div className="inner">
                                         <h3>100</h3>
                                         <p>Total Participants</p>
                                     </div>
-                                    <div class="icon">
-                                        <i class="fas fa-shopping-cart"></i>
+                                    <div className="icon">
+                                        <i className="fas fa-shopping-cart"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">
-                                        More info <i class="fas fa-arrow-circle-right"></i>
+                                    <a href="#" className="small-box-footer">
+                                        More info <i className="fas fa-arrow-circle-right"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-6">
-                                <div class="small-box bg-danger">
-                                    <div class="inner">
+                            <div className="col-lg-3 col-6">
+                                <div className="small-box bg-danger">
+                                    <div className="inner">
                                         <h3>150</h3>
                                         <p>New Orders</p>
                                     </div>
-                                    <div class="icon">
-                                        <i class="fas fa-shopping-cart"></i>
+                                    <div className="icon">
+                                        <i className="fas fa-shopping-cart"></i>
                                     </div>
-                                    <a href="#" class="small-box-footer">
-                                        More info <i class="fas fa-arrow-circle-right"></i>
+                                    <a href="#" className="small-box-footer">
+                                        More info <i className="fas fa-arrow-circle-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -78,8 +84,9 @@ const Dashboard = () => {
                     </div>
                 </section>
             </div>
-            {/* <!-- /.content-wrapper --> */}
         </div>
+        <Footer />
+        </React.Fragment>
     );
 };
 

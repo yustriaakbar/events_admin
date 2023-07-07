@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import Header from '../../layout/Header';
+import Footer from '../../layout/Footer';
+import Sidebar from '../../layout/Sidebar';
 
 const Participant = () => {
     const navigate = useNavigate();
@@ -38,19 +41,21 @@ const Participant = () => {
     };
 
     return (
+        <React.Fragment>
+        <Header />
+        <Sidebar />
         <div>
-            {/* <!-- Content Wrapper. Contains page content --> */}
-            <div class="content-wrapper">
-                <section class="content">
-                    <div class="container-fluid">
+            <div className="content-wrapper">
+                <section className="content">
+                    <div className="container-fluid">
                         <br/>
                         <h1 className="h3 mb-4 text-gray-800">List Participants</h1>
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
+                        <div className="card shadow mb-4">
+                            <div className="card-header py-3">
                             </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <div className="card-body">
+                                <div className="table-responsive">
+                                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -92,8 +97,9 @@ const Participant = () => {
                     </div>
                 </section>
             </div>
-            {/* <!-- /.content-wrapper --> */}
         </div>
+        <Footer />
+        </React.Fragment>
     );
 };
 
